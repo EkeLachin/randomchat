@@ -3,6 +3,7 @@
 <head>
     <title>Laçin Eke / Lachin Eke</title>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="http://ustaderslik.com/ornek/kopyala/ZeroClipboard.js"></script>
 </head>
     <body>
         <center>
@@ -11,7 +12,63 @@
                 <center>
                <h1><strong>Rastgele Sohbet / Random Chat</strong></h1>            
                 </center>
-            <br> 
+            <br>
+            <br>
+            <center>
+            <input type="text" id="mytext" placeholder="Metini giriniz">
+<button onclick="kopyala()">Kopyala</button> <br>
+<script>
+ function kopyala(){
+ var metin = document.getElementById("mytext");
+ metin.select();
+ document.execCommand("copy");
+ } 
+ </script>
+           </center>
+            <br>
+        <center>
+        <div id="metin">cArleone</div> <br />
+
+
+
+<button id="kopyala">Kopyala</button>
+
+<br /><br />
+
+<textarea  rows="5" cols="30">
+
+Yapıştır...
+
+</textarea>
+
+
+
+<script type="text/javascript">
+
+var metin=document.getElementById("metin").innerHTML;
+
+
+
+ZeroClipboard.setMoviePath('http://davidwalsh.name/demo/ZeroClipboard.swf');
+
+var clip = new ZeroClipboard.Client();
+
+clip.addEventListener('mousedown',function() {
+
+	clip.setText(metin);
+
+});
+
+clip.addEventListener('complete',function(client,text) {
+
+	alert("Kopyalandı: "+text);
+
+});
+
+clip.glue('kopyala');
+
+</script>
+        </center>
         <center>
             <div id="disqus_thread"></div>
 <script>
