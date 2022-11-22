@@ -22,17 +22,37 @@
                <h1><strong>Rastgele Sohbet / Random Chat</strong></h1>            
                 </center>
                 <center>
-                    <div class="codeblock-wrapper"><pre class="html hljs xml"><code class="highlight-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disqus_thread"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-                            (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">// DON'T EDIT BELOW THIS LINE</span>
-                            <span class="hljs-keyword">var</span> d = <span class="hljs-built_in">document</span>, s = d.createElement(<span class="hljs-string">'script'</span>);
-                            s.src = <span class="hljs-string">'https://randomchat-2.disqus.com/embed.js'</span>;
-                            s.setAttribute(<span class="hljs-string">'data-timestamp'</span>, +<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
-                            (d.head || d.body).appendChild(s);
-                            })();
-                        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span></code></pre><button class="codeblock-copy-button">Sohbet kaynağının (script) kopyala BURAYA BAS / Copy chat script CLİCK HERE</button>
-                    </div>
+                    <button class="btn">Copy</button>
+                    <div><code><div id="disqus_thread"></div>
+<script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://randomchat-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></code></div>
+                    <script src="clipboard.min.js"></script>
+                    <script>
+      var clipboard = new ClipboardJS('.btn', {
+        target: function () {
+          return document.querySelector('div');
+        },
+      });
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
                 </center>
                 <br>
                 <br>
